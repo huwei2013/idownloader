@@ -5,6 +5,42 @@ import java.net.URL;
 
 public class Downloader {
 
+//	drop table if exists TB_SUB_TASK;
+//
+//	drop table if exists TB_TASK;
+//
+//	/*==============================================================*/
+//	/* Table: TB_SUB_TASK                                           */
+//	/*==============================================================*/
+//	create table TB_SUB_TASK
+//	(
+//	   id                   bigint not null,
+//	   pid                  bigint not null,
+//	   start_point          bigint not null,
+//	   block_size           bigint not null,
+//	   pulled               bigint,
+//	   status               int not null,
+//	   primary key (id)
+//	);
+//
+//	/*==============================================================*/
+//	/* Table: TB_TASK                                               */
+//	/*==============================================================*/
+//	create table TB_TASK
+//	(
+//	   id                   bigint not null,
+//	   url                  varchar(256) not null,
+//	   length               bigint not null,
+//	   status               int not null,
+//	   file_name            varchar(256) not null,
+//	   file_path            varchar(1024),
+//	   file_extensions      varchar(32),
+//	   primary key (id)
+//	);
+//
+//	alter table TB_SUB_TASK add constraint FK_fk_tb_task_tb_sub_task foreign key (pid)
+//	      references TB_TASK (id) on delete restrict on update restrict;
+
 	public HttpURLConnection getHttpURLConnection(String url) throws Exception {
 		URL dlUrl = new URL(url);
 		HttpURLConnection conn = (HttpURLConnection) dlUrl.openConnection();

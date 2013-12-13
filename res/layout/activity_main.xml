@@ -24,4 +24,5 @@
         android:onClick="download"
         android:text="Download" />
 
+    <LinearLayout android:orientation="vertical"></LinearLayout>
 </RelativeLayout>
